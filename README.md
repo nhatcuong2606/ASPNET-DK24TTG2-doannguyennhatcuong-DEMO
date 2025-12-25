@@ -1,7 +1,7 @@
 # ĐỒ ÁN CƠ SỞ NGÀNH ASP.NET
 
 ## Thông tin sinh viên
-- Họ tên: Nguyễn Nhật Cường
+- Họ tên: Đoàn Nguyễn Nhật Cường
 - Mã lớp: DK24TTG2
 - Môn học: Chuyên đề ASP.NET
 - Giảng viên hướng dẫn: Đoàn Phước Miền
