@@ -4,7 +4,7 @@
 - Họ tên: Đoàn Nguyễn Nhật Cường
 - Mã lớp: DK24TTG2
 - Môn học: Chuyên đề ASP.NET
-- Giảng viên hướng dẫn: Đoàn Phước Miền
+- Giảng viên hướng dẫn: TS. Đoàn Phước Miền
 
 ## Tên đề tài
 Website quản lý chi tiêu cá nhân bằng ASP.NET
