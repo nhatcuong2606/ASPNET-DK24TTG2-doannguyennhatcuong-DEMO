@@ -1,0 +1,71 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="WebApplication.SiteMaster" %>
+
+<!DOCTYPE html>
+<html lang="vi">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> - Quản Lý Chi Tiêu</title>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <!-- Main CSS -->
+    <link href="~/Site.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <!-- Header -->
+        <header class="header">
+            <div class="container header-content">
+                <div class="logo">
+                    <i class="fa-solid fa-wallet"></i>
+                    <span class="logo-text">Quản Lý Chi Tiêu</span>
+                </div>
+                <nav class="nav-menu">
+                    <asp:HyperLink ID="lnkDashboard" runat="server" NavigateUrl="~/Default.aspx" CssClass="nav-link">
+                        <i class="fa-solid fa-house"></i> Trang chủ
+                    </asp:HyperLink>
+                    <asp:HyperLink ID="lnkExpense" runat="server" NavigateUrl="~/Expense.aspx" CssClass="nav-link">
+                        <i class="fa-solid fa-money-bill-transfer"></i> Chi tiêu
+                    </asp:HyperLink>
+                    <asp:HyperLink ID="lnkCategory" runat="server" NavigateUrl="~/Category.aspx" CssClass="nav-link">
+                        <i class="fa-solid fa-folder-open"></i> Danh mục
+                    </asp:HyperLink>
+                    <asp:HyperLink ID="lnkBudget" runat="server" NavigateUrl="~/Budget.aspx" CssClass="nav-link">
+                        <i class="fa-solid fa-piggy-bank"></i> Ngân sách
+                    </asp:HyperLink>
+                    <asp:HyperLink ID="lnkGoal" runat="server" NavigateUrl="~/Goal.aspx" CssClass="nav-link">
+                        <i class="fa-solid fa-bullseye"></i> Mục tiêu
+                    </asp:HyperLink>
+                    <asp:HyperLink ID="lnkReport" runat="server" NavigateUrl="~/Report.aspx" CssClass="nav-link">
+                        <i class="fa-solid fa-chart-pie"></i> Báo cáo
+                    </asp:HyperLink>
+                </nav>
+                <div class="user-menu">
+                    <i class="fa-solid fa-user-circle"></i>
+                    <asp:Label ID="lblUsername" runat="server" CssClass="username"></asp:Label>
+                    <asp:HyperLink ID="lnkLogout" runat="server" NavigateUrl="~/Logout.aspx" CssClass="btn-logout">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                    </asp:HyperLink>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="container">
+                <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer" style="text-align: center; padding: 20px; color: var(--text-muted); border-top: 1px solid var(--border-color); margin-top: 40px;">
+            <div class="container">
+                <p>&copy; <%: DateTime.Now.Year %> - Quản Lý Chi Tiêu Cá Nhân | ASP.NET Web Forms</p>
+            </div>
+        </footer>
+    </form>
+</body>
+</html>
